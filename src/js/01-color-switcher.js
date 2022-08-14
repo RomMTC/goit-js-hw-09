@@ -5,16 +5,23 @@ const refs = {
   stopBtn: document.querySelector('button[data-stop]'),
 };
 refs.startBtn.addEventListener('click', changeBodyColor);
-// refs.stopBtn.addEventListener('click',);
+refs.stopBtn.addEventListener('click', stopChangeBodyColor);
+
+refs.stopBtn.setAttribute('disabled', 'true');
+let intervalId = null;
 
 function getRandomHexColor() {
   return document.body.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 function changeBodyColor() {
- intervalID = setInterval(getRandomHexColor, 1000);
+  intervalId = setInterval(getRandomHexColor, 1000);
+  refs.startBtn.setAttribute('disabled', 'true');
+  refs.stopBtn.removeAttribute('disabled', 'true');
 }
-// setInterval(getRandomHexColor(), 1000)
+
 function stopChangeBodyColor() {
-  clearInterval(intervalID);
+  clearInterval(intervalId);
+  refs.startBtn.removeAttribute('disabled', 'true');
+  refs.stopBtn.setAttribute('disabled', 'true');
 }
