@@ -1,1 +1,0 @@
-{"mappings":"gfAAAA,EAAA,Q","sources":["src/js/01-color-switcher.js"],"sourcesContent":["import Notiflix from 'notiflix';\n\nfunction getRandomHexColor() {\n  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;\n}\n"],"names":["parcelRequire"],"version":3,"file":"01-color-switcher.27799212.js.map"}
