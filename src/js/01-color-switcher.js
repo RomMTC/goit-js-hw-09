@@ -11,8 +11,10 @@ function getRandomHexColor() {
   return document.body.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function changeBodyColor(color) {
-  setInterval(getRandomHexColor, 1000);
+function changeBodyColor() {
+ intervalID = setInterval(getRandomHexColor, 1000);
 }
 // setInterval(getRandomHexColor(), 1000)
-// function start
+function stopChangeBodyColor() {
+  clearInterval(intervalID);
+}
