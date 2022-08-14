@@ -3,6 +3,7 @@ import Notiflix from 'notiflix';
 import flatpickr from "flatpickr";
 // Дополнительный импорт стилей
 import "flatpickr/dist/flatpickr.min.css";
+import 'flatpickr/dist/themes/dark.css';
 
 const options = {
   enableTime: true,
